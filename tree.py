@@ -2,7 +2,6 @@ from math import log
 import operator
 import matplotlib.pyplot as plt
 import matplotlib
-
 def cal_shannon_ent(dataset):
     """
     计算熵
@@ -20,7 +19,6 @@ def cal_shannon_ent(dataset):
             labels_counts[current_label] = 0
         # 累加该标签出现的次数
         labels_counts[current_label] += 1
-
         #print("类别统计：", labels_counts)
     # 4. 计算香农熵
     shannon_ent = 0.0
@@ -344,4 +342,5 @@ labels = ['Outlook', 'Temperature', 'Humidity', 'Windy']
 
 # 生成决策树
 tree = creat_tree(weather_data, labels[:])  # 注意传入拷贝 labels[:]
+
 create_plot(tree)
